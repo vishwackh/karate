@@ -1,0 +1,227 @@
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a ui-sref="dashbord.home">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Student Details</li>
+</ol>
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Add New Student</div>
+        <div class="card-body">
+            <form name="userForm" novalidate>
+                <div class="form-group">
+                    <div class="form-row" ng-class="{ 'has-error' : !userForm.usn.$valid && (userForm.usn.$dirty || userForm.$submitted),'has-success' : userForm.usn.$valid && (userForm.usn.$dirty || submitted)}">
+                        <input type="text" usn="usn" class="form-control" ng-model="ldata.usn" placeholder="Your Membership No" ng-required="true">
+                        <p ng-show="userForm.usn.$error.required && (userForm.usn.$dirty || userForm.$submitted)" class="help-block">Membership No is required.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row" ng-class="{ 'has-error' : !userForm.name.$valid && (userForm.name.$dirty || userForm.$submitted),'has-success' : userForm.name.$valid && (userForm.name.$dirty || submitted)}">
+                        <input type="text" name="name" class="form-control" ng-model="ldata.name" placeholder="Your name" ng-required="true">
+                        <p ng-show="userForm.name.$error.required && (userForm.name.$dirty || userForm.$submitted)" class="help-block">name is required.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="form-row" ng-class="{ 'has-error' : !userForm.teacher.$valid && (userForm.teacher.$dirty || userForm.$submitted),'has-success' : userForm.teacher.$valid && (userForm.teacher.$dirty || submitted)}">
+                        <div class="input-group">
+                            <input type="text" teacher="teacher" class="form-control" ng-model="ldata.teacher" placeholder="Your Teacher" readonly ng-required="true">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" ng-click="selectTeachers()">Select
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                        <p ng-show="userForm.teacher.$error.required && (userForm.teacher.$dirty || userForm.$submitted)" class="help-block">Teacher is required.</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox1" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank1">
+                            <label for="checkbox1">
+                                1st Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox2" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank2">
+                            <label for="checkbox2">
+                                2nd Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox3" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank3">
+                            <label for="checkbox3">
+                                3rd Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox4" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank4">
+                            <label for="checkbox4">
+                                4th Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox5" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank5">
+                            <label for="checkbox5">
+                                5th Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox6" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank6">
+                            <label for="checkbox6">
+                                6th Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox7" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank7">
+                            <label for="checkbox7">
+                                7th Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox8" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank8">
+                            <label for="checkbox8">
+                                8th Rank
+                            </label>
+                        </div>
+                        <div class="checkbox checkbox-primary">
+                            <input id="checkbox9" type="checkbox" ng-false="false" ng-true="true" ng-model="ldata.rank9">
+                            <label for="checkbox9">
+                                9th Rank
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" ng-click="userForm.$submitted=true;addStudent(ldata,userForm)">Add Students</button>
+                <div class="clearfix">&nbsp;</div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div class="container">
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fa fa-table"></i> Images Table</div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>SL No</th>
+                            <th>Membership No</th>
+                            <th>Name</th>
+                            <th>Teacher</th>
+                            <th>Ranks</th>
+                            <th>Created Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="cat in imageList ">
+                            <td>{{$index +1}}</td>
+                            <td>{{cat.usn}}</td>
+                            <td>{{cat.name}}</td>
+                            <td>{{cat.teacher}}</td>
+                            <td>
+                                <span ng-if="cat.rank1==1"  class="badge alert-success ">Rank 1</span>
+                                <span ng-if="cat.rank2==1"  class="badge alert-success">Rank 2</span>
+                                <span ng-if="cat.rank3==1"  class="badge alert-success">Rank 3</span>
+                                <span ng-if="cat.rank4==1"  class="badge alert-success">Rank 4</span>
+                                <span ng-if="cat.rank5==1"  class="badge alert-success">Rank 5</span>
+                                <span ng-if="cat.rank6==1"  class="badge alert-success">Rank 6</span>
+                                <span ng-if="cat.rank7==1"  class="badge alert-success">Rank 7</span>
+                                <span ng-if="cat.rank8==1"  class="badge alert-success">Rank 8</span>
+                                <span ng-if="cat.rank9==1"  class="badge alert-success">Rank 9</span>
+                            </td>
+                            <td>{{cat.createdDate |timeago}}</td>
+                            <!-- <td>
+                                <a class="btn btn-success" ng-click="viewStudent(cat)">
+                                    <em class="fa fa-eye"></em>
+                                </a>
+                            </td> -->
+                            <td>
+                                <a class="btn btn-danger" ng-click="deleteImage(cat)">
+                                    <em class="fa fa-trash"></em>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deletemodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">You Want to delete
+                <span class="help-block">{{delobj.name}} </span> image</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                <a class="btn btn-primary" ng-click="deleteImagerecord(delobj)">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="teachermodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Teacher</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>SL No</th>
+                                    <th>Name</th>
+                                    <th>Present rank</th>
+                                    <th>Details</th>
+                                    <th>Dojo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="cat in teachers ">
+                                    <td>{{$index +1}}</td>
+                                    <td>
+                                        <div class="radio">
+                                        <input type="radio" name="radio1" id="radio{{$index}}" ng-model="ldata.teacher" value="{{cat.name}}">
+                                        <label for="radio{{$index}}">
+                                                {{cat.name}}
+                                        </label>
+                                        </div>
+                                    </td>
+                                    <td>{{cat.presentrank}}</td>
+                                    <td>{{cat.details}}</td>
+                                    <td>{{cat.dojo}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+          
+                <a class="btn btn-primary" type="button" data-dismiss="modal">Ok</a>
+            </div>
+        </div>
+    </div>
+</div>
