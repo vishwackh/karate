@@ -76,7 +76,7 @@
             }
         })
         .run(function ($rootScope) {
-         $rootScope.ApiUrl = "http://localhost:90/k/api/";
+         $rootScope.ApiUrl = "http://localhost:90/karate/api/";
         //    $rootScope.ApiUrl = "http://karatemallikarjun.com/admin/api/";
         });
 
