@@ -37,7 +37,7 @@ a:focus{
 }
 /*-- banner --*/
 .banner{
-	background:url(../images/1/7.jpg) no-repeat 0px 0px;
+	background:url(../images/mallikarjuna_karate/banner.JPG) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -47,7 +47,7 @@ a:focus{
 	position: relative;
 }
 .banner1{
-	background:url(../images/7.jpg) no-repeat 0px -195px;
+	background:url(../images/mallikarjuna_karate/banner.JPG) no-repeat 0px -195px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -1614,7 +1614,7 @@ section#tables  p {
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	font-size: 0.9em;
-	color: #999;
+	/* color: #999; */
 	border-top: none !important;
 }
 .tab-content > .active {
@@ -3197,3 +3197,59 @@ h2.typoh2{
 .meta a:hover {
     color: rgba(0, 0, 0, .87);
 }
+.margin-bottom-5{
+	margin-bottom: 5px !important;
+}
+.containerloader {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .flex {
+	min-height: 60pt;
+  }
+  
+  @keyframes loading {
+	0% {
+	  width: 50pt;
+	  height: 50pt;
+	  margin-top: 0;
+	}
+	25% {
+	  height: 4pt;
+	  margin-top: 23pt;
+	}
+	50% {
+	  width: 4pt;
+	}
+	75% {
+	  width: 50pt;
+	}
+	100% {
+	  width: 50pt;
+	  height: 50pt;
+	  margin-top: 0;
+	}
+  }
+  
+  .loader {
+	width: 50pt;
+	height: 50pt;
+	border-radius: 100%;
+	border: #48b7ec 4pt solid;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+	animation: loading 1s infinite;
+  }
+  
+  .load-text {
+	padding-top: 15px;
+	text-align: center;
+	font: 14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: lighten(#6767fa, 75%);
+  }

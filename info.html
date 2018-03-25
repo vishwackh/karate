@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Karate Mallikarjun</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Karate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //custom-theme -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="datatables/datatables.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+    <!-- font-awesome-icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Shadows+Into+Light+Two&amp;subset=latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner1">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header navbar-left">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1>
+                        <a class="navbar-brand" href="index.html">
+                            <span>
+                                <i>K</i>arate Mallikarjun</span>
+                        </a>
+                    </h1>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="menu menu--juliet">
+                        <ul class="nav navbar-nav">
+                            <li class="menu__item">
+                                <a href="index.html" class="menu__link">Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="services.html" class="menu__link">Services</a>
+                            </li>
+                            <li class="menu__item menu__item--current">
+                                <a href="info.html" class="menu__link">Information</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="gallery.html" class="menu__link">Gallery</a>
+                            </li>
+                            <!-- <li class="dropdown menu__item">
+								<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+								<ul class="dropdown-menu agile_short_dropdown">
+									<li><a href="icons.html">Web Icons</a></li>
+									<li><a href="typography.html">Typography</a></li>
+								</ul>
+							</li> -->
+                            <!-- <li class="menu__item"><a href="" class="menu__link">About Us</a></li> -->
+                            <li class="menu__item ">
+                                <a href="mail.html" class="menu__link">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-danger" href="http://karatemallikarjun.com/Registration_form.pdf" download>
+                                    <i class="fa fa-cloud-download"></i> Registration</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </nav>
+            <div class="w3layouts_banner1_info">
+                <h2>Information</h2>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <!-- mail -->
+
+    <div class="banner-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Student  List:</h2>
+                    </div>
+
+                </div>
+                <div class="col-md-12">
+
+                    <table id="student" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Membership No</th>
+                                <th>Teacher</th>
+                                <th>Ranks</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <div id="studentLoader" class="containerloader"><div class="flex"><div class="loader"></div></div><div class="load-text">Loading...</div></div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="page-header">
+                                <h2>Instructor List:</h2>
+                            </div>                    
+                    
+                </div>
+                <div class="col-md-12">
+
+                    <table id="teacher" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Present rank</th>
+                                <th>Details</th>
+                                <th>Dojo</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <div id="teacherLoader" class="containerloader"><div class="flex"><div class="loader"></div></div><div class="load-text">Loading...</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-4 agile_footer_grid">
+                <h3>About Us</h3>
+                <p class="margin-bottom-5">Welcome to the official website of AOKSSI.</p>
+				<p>“AOKSSI”, the home of traditional martial art having the largest Shorin-ryu branches in India headed by <strong>Renshi. H. Mallikarjun,</strong> AOKSSI of India is the place for learning of traditional Okinawa Karate as well as sports, Karate and also provided other martial arts like Kobudo and many more traditional martial arts.</p>
+                <ul class="agileits_social_list">
+                    <li>
+                        <a href="https://www.facebook.com/shihanmallikarjun.karate" target="_blank" class="w3_agile_facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="agile_twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="w3_agile_dribble">
+                            <i class="fa fa-dribbble" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 agile_footer_grid">
+                <h3>Latest News</h3>
+                <ul class="agileits_w3layouts_footer_grid_list">
+                    <li>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Donec purus neque, vulputate id est id</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Nullam fringilla sed quam vitae congue</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Cras libero arcu, accumsan ac viverra vel</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Aenean porttitor accumsan tincidunt ut</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <a href="#" data-toggle="modal" data-target="#myModal">Nullam sed turpis gravida auctor</a>
+                    </li>
+                </ul>
+            </div>
+			<div class="col-md-4 agile_footer_grid">
+				<h3>Contact Info</h3>
+				<ul class="w3_address">
+					<li>
+						<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>#3388 door no, 2nd main 2nd cross,
+						<span>Keshav Nagar, Harihar,</span> 
+						<span>Davangere, Karnataka-577601</span>
+					</li>
+					<li>
+						<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+						<a href="mailto:shihanmallikarjunkarate@gmail.com">shihanmallikarjunkarate@gmail.com</a>
+					</li>
+					<li>
+						<i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+91-8105449050</li>
+				</ul>
+	 
+			</div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="clearfix">&nbsp;</div>
+
+            <div class="agileinfo_copyright">
+                <p>© 2018 Karate. All rights reserved | by
+                    <a href="http://karatemallikarjun.com/">www.karatemallikarjun.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- //footer -->
+    <!-- bootstrap-pop-up -->
+    <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Karate
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <section>
+                    <div class="modal-body">
+                        <img src="images/4.jpg" alt=" " class="img-responsive" />
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                            aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+                            velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+                            pariatur.
+                            <i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</i>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //bootstrap-pop-up -->
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <script src="datatables/datatables.min.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+            	var defaults = {
+            	containerID: 'toTop', // fading element id
+            	containerHoverID: 'toTopHover', // fading element hover id
+            	scrollSpeed: 1200,
+            	easingType: 'linear' 
+            	};
+            */
+   
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+            var data = [];
+            $('#student').hide()
+            $('#teacher').hide()
+            $('#teacherLoader').show()
+            $('#studentLoader').show()
+            $.ajax({
+                type: "GET",
+                url: 'http://karatemallikarjun.com/api/StudentList',
+                dataType: "json",
+                contentType: "application/json",
+                success: function (response) {
+                    console.log("response==>", response);
+                    if (response) {
+                        $('#student').show()
+                        $('#studentLoader').hide()
+                        displayData(response.data)
+                    }
+
+                },
+                error: function (response) {
+                    $('#cover').fadeOut(2000);
+                    $('#student').show()
+                    $('#studentLoader').hide()
+                    console.log("error response==>", response);
+                }
+
+            });
+            $.ajax({
+                type: "GET",
+                url: 'http://karatemallikarjun.com/api/teacherList',
+                dataType: "json",
+                contentType: "application/json",
+                success: function (response) {
+                    console.log("response==>", response);
+                    if (response) {
+                        $('#teacher').show()
+                        $('#teacherLoader').hide()
+                        displayData1(response.data)
+                    }
+
+                },
+                error: function (response) {
+                    $('#cover').fadeOut(2000);
+                    console.log("error response==>", response);
+                }
+
+            });
+
+            function displayData(students) {
+                for (var i in students) {
+                    var ranks = '';
+                    ranks += (students[i].rank1 != 1) ? ' ' : '<span class="badge alert-success">Rank1 </span>';
+                    ranks += (students[i].rank2 != 1) ? ' ' :
+                        '<span class="badge alert-success">Rank2 </span> ';
+                    ranks += (students[i].rank3 != 1) ? ' ' : '<span class="badge alert-success">Rank3 </span>';
+                    ranks += (students[i].rank4 != 1) ? ' ' : '<span class="badge alert-success">Rank4 </span>';
+                    ranks += (students[i].rank5 != 1) ? ' ' : '<span class="badge alert-success">Rank5 </span>';
+                    ranks += (students[i].rank6 != 1) ? ' ' : '<span class="badge alert-success">Rank6 </span>';
+                    ranks += (students[i].rank7 != 1) ? ' ' : '<span class="badge alert-success">Rank7 </span>';
+                    ranks += (students[i].rank8 != 1) ? ' ' : '<span class="badge alert-success">Rank8 </span>';
+                    ranks += (students[i].rank9 != 1) ? ' ' : '<span class="badge alert-success">Rank9 </span>';
+                    data.push({
+                        'name': students[i].name,
+                        'usn': students[i].usn,
+                        'teacher': students[i].teacher,
+                        'rank': ranks
+                    })
+                }
+                $('#student').DataTable({
+                    "processing": true,
+                    "info": true,
+                    "stateSave": true,
+                    data: data,
+                    "columns": [{
+                            "data": "name"
+                        },
+                        {
+                            "data": "usn"
+                        },
+                        {
+                            "data": "teacher"
+                        },
+                        {
+                            "data": "rank"
+                        }
+                    ]
+                });
+            }
+
+            function displayData1(data) {
+                $('#teacher').DataTable({
+                    "processing": true,
+                    "info": true,
+                    "stateSave": true,
+                    data: data,
+                    "columns": [{
+                            "data": "name"
+                        },
+                        {
+                            "data": "presentrank"
+                        },
+                        {
+                            "data": "details"
+                        },
+                        {
+                            "data": "dojo"
+                        }
+                    ]
+                });
+            }
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+</body>
+
+</html>
